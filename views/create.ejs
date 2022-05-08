@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<%- include('layouts/head') %>
+
+    <body>
+        <%- include('layouts/navBar.ejs') %>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <form action="/create" method="post">
+                            <div class="mb-3">
+                                <label class="form-label" for="name">Ім'я</label>
+                                <input
+                                class="form-control" type="text" name="name" id="name" placeholder="Ім'я">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="phone">Номер телефону</label>
+                                <input
+                                class="form-control" type="text" name="phone" id="phone" placeholder="Номер телефону">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="address">Адреса проживання</label>
+                                <input
+                                class="form-control" type="text" autocomplete="street-address" name="address" id="address"
+                                    placeholder="Адреса проживання">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Додати</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </body>
+
+</html>
