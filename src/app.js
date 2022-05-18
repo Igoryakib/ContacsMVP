@@ -38,7 +38,7 @@ const create = async ({name, phone, address}) => {
 
 const deleteContact = async (contactId) => {
     let allContacts = await findAll();
-    allContacts = contacts.filter(item => item.id !== contactId);
+    allContacts = allContacts.filter(item => item.id !== contactId);
     await fs.writeFile(contactsPath, JSON.stringify(allContacts));
 };
 
